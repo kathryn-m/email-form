@@ -1,0 +1,254 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    --darkest: #303346;
+    --dark-100: #4C5270;
+    --dark-20: rgb(76,82,112, .2);
+    --white: #ffffff;
+    --pink-dark: #ea536b; 
+    --pink: #EF7C8E;
+    --pink-pale:#F4A7B3 ;
+
+    font-family: 'News Cycle', sans-serif;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin: 0;
+    min-height: 100vh;
+
+    background-color: var(--darkest);
+    background-image: url(images/alex-blajan-vNGL14-V5TY-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    
+}
+
+/* TYPOGRAPHY */
+h3,
+.sent,
+.next {
+    text-align: center;
+    align-self: center;
+    line-height: 1.3;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 1.3em;
+}
+
+
+.join,
+.thank-you {
+    font-family: 'Dancing Script', cursive;
+}
+.join {
+    font-size: 2.2rem;
+    color: var(--dark-100);
+    margin: 0 0 .1em;
+
+}
+.thank-you {
+    font-size: 2.5rem;
+    color: var(--white);
+    margin: 0 0 .5em;
+}
+
+.thank-you:after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 40%;
+    margin-top: .1em;
+    border-top: 2px solid var(--white);
+    border-top-right-radius: 255px 15px;
+    border-top-left-radius: 5px;
+    transform: rotate(-3deg);
+
+}
+
+.receive {
+    color: var(--dark-100);
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin: 0 0 2.5em;
+}
+
+.sent {
+    font-weight: 400;
+    font-size: 1.1rem;
+    margin: 0 0 .9em;
+}
+
+.next {
+    font-weight: 700;
+    font-size: 1.75rem;
+    margin: 1em 0 .5em;
+    font-family: 'Dancing Script', cursive;
+}
+.photo-credit {
+    font-size: .6rem;
+    color: var(--dark-100);
+}
+
+/* LINKS & BUTTONS */
+
+a {
+    text-decoration: none;
+}
+
+.credit {
+    color: var(--pink)
+}
+
+.credit:hover,
+.credit:focus,
+.credit:active {
+    color: var(--darkest)
+}
+
+
+button, 
+.link-btn {
+    color: var(--white);
+    font-size: 1rem;
+    padding: .6em;
+    transition: background-color .25s;
+
+}
+
+.link-btn {
+    background-color: var(--pink-pale);
+    width: 47%;
+    /*border: .5px solid var(--white);*/
+    border-radius: 5px;
+}
+
+.link-btn:hover,
+.link-btn:focus,
+.link-btn:active {
+    color: var(--pink-dark);
+}
+
+
+button {
+    display: block;
+    border: none;
+    border-radius: 1rem;
+}
+
+.submit-btn {
+    background-color: var(--pink);
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.close-btn {
+    background-color: inherit;
+    width: 2em;
+    height: 2em;
+    margin-left: auto;
+}
+
+.submit-btn:hover,
+.close-btn-pink:hover {
+    background-color: var(--pink-pale);
+}
+
+.close-btn-blue:hover {
+    background-color: yellow;
+}
+
+button:active {
+    transform: scale(1.1)
+}
+
+
+/* LAYOUT */
+
+
+.form-container,
+.success-msg-container {
+    width: 18rem;
+    height: 23rem;
+    margin: 1em;
+}
+
+
+.form-container {
+    position: relative;
+    background-color: var(--white);
+    padding: 2.5em 1.5em;
+
+    
+}
+
+.success-msg-container,
+.error-msg-container {
+    position: absolute;
+    color: var(--white);
+}
+
+.success-msg-container{
+    display: flex;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--pink);
+    padding: .9rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.error-msg-container {
+    display: none;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1rem;
+    background-color: var(--darkest);
+    border-radius: 1em;
+    padding: 0.5em;
+    top: .10rem;
+    align-self: center;
+    width: 15rem;
+}
+
+.btns-light {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 .7em;
+}
+
+/* FORM AND INPUTS */
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;    
+}
+
+
+
+input {
+    border-radius: .3em;
+    width: 100%;
+    border: 1px solid var(--dark-20);
+    margin-bottom: 1em;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: .3em .5em;
+    
+    
+}
+/*
+input:focus {
+    outline-color: yellow;
+}
+*/
